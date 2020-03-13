@@ -1,17 +1,19 @@
 import React from 'react';
-import {HashRouter, Route } from 'react-router-dom';
+import {BrowserRouter, Route } from 'react-router-dom';
 import About from './router/About';
 // import {About as Potato} from './router/About';
 import Home from './router/Home';
 import Navigation from './component/Navigation';
+import Detail from './router/Detail';
 
 function App(){
   return (
-    <HashRouter>
+    <BrowserRouter>
     <Navigation></Navigation>
     <Route path="/" exact={true} component={Home} />
     <Route path="/about" component={About} />
-  </HashRouter>
+    <Route path="/movie-detail" component={Detail} />
+  </BrowserRouter>
   );
 }
 
