@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import './Movie.css';
 
 // function Movie({movies}){
-function Movie({title, year, summary, poster, genres}){    
+function Movie({id, title, year, summary, poster, genres}){    
     return (
     <Link to={
-        {pathname: "/movie-detail",
+        {pathname: `/movie/${id}`,
+        // {pathname: "/movie/"+id,
         state:{
             title,
             year,
